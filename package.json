@@ -1,14 +1,17 @@
 {
-  "name": "node-crud-test-example",
-  "version": "0.0.1",
-  "description": "Example of how to implement and test a simple CRUD webapp",
-  "main": "app.js",
-  "repository": "https://github.com/NoahGreer/node-crud-test-example",
-  "author": "Noah Greer <noah.greer@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "engines": {
-    "node": ">=20.5.1"
-  },
-  "packageManager": "yarn@1.22.22"
+	"name": "node-crud-test-example",
+	"version": "0.0.1",
+	"description": "Example of how to implement and test a simple CRUD webapp",
+	"main": "app.js",
+	"repository": "https://github.com/NoahGreer/node-crud-test-example",
+	"author": "Noah Greer <noah.greer@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"engines": {
+		"node": ">=20.5.1"
+	},
+	"packageManager": "yarn@1.22.22",
+	"devDependencies": {
+		"prettier": "^3.2.5"
+	}
 }
