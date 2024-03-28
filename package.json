@@ -9,7 +9,8 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"test": "node --test"
+		"test": "node --test",
+		"start": "node ./src/app.js"
 	},
 	"engines": {
 		"node": ">=20.5.1"
