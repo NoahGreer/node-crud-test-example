@@ -6,5 +6,9 @@
   "repository": "https://github.com/NoahGreer/node-crud-test-example",
   "author": "Noah Greer <noah.greer@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=20.5.1"
+  },
+  "packageManager": "yarn@1.22.22"
 }
