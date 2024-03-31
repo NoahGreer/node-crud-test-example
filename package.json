@@ -10,13 +10,15 @@
 	"private": true,
 	"scripts": {
 		"test": "node --test",
-		"start": "node ./src/app.js"
+		"start": "node ./src/app.js",
+		"load-test": "artillery run test/notes_api_load.yml"
 	},
 	"engines": {
 		"node": ">=20.5.1"
 	},
 	"packageManager": "yarn@1.22.22",
 	"devDependencies": {
+		"artillery": "^2.0.8",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.1.3",

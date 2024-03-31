@@ -1,0 +1,43 @@
+config:
+  target: http://localhost:3000/api/v1
+  phases:
+    - name: Warm up
+      duration: 10
+      arrivalRate: 10
+
+    - name: Ramp up light load
+      duration: 30
+      arrivalRate: 10
+      rampTo: 100
+
+    - name: Ramp up heavy load
+      duration: 30
+      arrivalRate: 500
+      rampTo: 1000
+
+scenarios:
+  - name: "Create, read, update, delete notes flow"
+    flow:
+      - post:
+          url: "/notes"
+          json:
+            content: "testContent"
+          capture:
+            - json: "$.id"
+              as: "noteId"
+
+      - get:
+          url: "/notes/{{ noteId }}"
+
+      - put:
+          url: "/notes/{{ noteId }}"
+          json:
+            content: "updatedTestContent"
+
+      - delete:
+          url: "/notes/{{ noteId }}"
+
+  - name: "Get all notes flow"
+    flow:
+      - get:
+          url: "/notes"
